@@ -12,10 +12,10 @@ build: build_backend build_frontend;
 
 run_tests:
 	@$(MAKE) -f $(THIS_FILE) build_backend
-	docker-compose -f $(DOCKER_COMPOSE_FILE) up --abort-on-container-exit --scale workers=5 --scale frontend=0
+	docker-compose -f $(DOCKER_COMPOSE_FILE) up --abort-on-container-exit --scale workers=1 --scale frontend=0
 
 up:
-	docker-compose -f $(DOCKER_COMPOSE_FILE) up -d --scale workers=5 --scale test=0
+	docker-compose -f $(DOCKER_COMPOSE_FILE) up -d --scale workers=1 --scale test=0
 	python -m webbrowser "http://localhost:3001/"
 
 down:
