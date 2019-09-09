@@ -1,0 +1,29 @@
+mongodb:
+  user:
+  password:
+  host: 'mongodb'
+  port: 27017
+
+master:
+  internal_host: '0.0.0.0'
+  host: 'master'
+  port: 17011
+
+worker:
+  user:
+
+storage:
+  scheme: file
+  prefix: /data/resources/
+
+auth:
+  secret_key: 'lol'
+
+web:
+  host: '0.0.0.0'
+  port: 5000
+  endpoint: http://localhost:3001
+  debug: true
+
+demo:
+  enabled: false
